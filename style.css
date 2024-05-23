@@ -1,0 +1,57 @@
+@font-face {
+    font-family: MultiPro;
+    src: url(MultiroundPro.otf);
+}
+
+body{
+    font-family: MultiPro;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background: url(img/bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+main h1, main h2, main a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main h1{
+    font-size: 80px;
+    margin: -20px;
+    margin-top: 250px;
+    color: #C5FF8B;
+}
+
+main h2{
+    font-size: 40px;
+    color: white;
+}
+
+main a{
+    font-size: 25px;
+    transition: 0.5s ease-in-out;
+    text-decoration: none;
+}
+
+a:hover{
+    font-size: 30px;
+    transition: 0.5s ease-in-out;
+}
+
+@media screen and (width < 400px){
+    main h1{
+        font-size: 65px;
+    }
+
+    main h2{
+        font-size: 25px;
+    }
+}

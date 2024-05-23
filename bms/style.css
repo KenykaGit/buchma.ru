@@ -1,0 +1,84 @@
+@font-face {
+    font-family: MultiPro;
+    src: url(img/MultiroundPro.otf);
+}
+
+body{
+    font-family: MultiPro;
+    background-color: #28043E;
+    margin-left: 20px;
+    overflow-x:hidden;
+    
+}
+
+.main h3{
+    width: 440px;
+    color: white;
+    font-size: 35px;
+}
+
+.main h1{
+    font-size: 70px;
+    display: inline-flex;
+}
+
+.card h1, h3, h4{
+    margin: 15px;
+    margin-top: 25px;
+}
+
+.card{
+    margin: 30px;
+    border-radius: 15px;
+    min-width: 200px;
+}
+
+.btn{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.text-info{
+    margin-top: 30px;
+}
+
+.hr{
+    margin: 50px;
+    background-color: #A6AAFF;
+    height: 7px;
+    width: 70%;
+    border-radius: 20px;
+}
+
+footer{
+    color: white;
+}
+
+footer h1, h2, h3, h4, h5, p{
+    margin-left: 10px;
+}
+
+@media screen and (width < 600px){
+    .main h1{
+        font-size: 50px;
+    }
+
+    .main h3{
+        font-size: 25px;
+        width: 340px;
+    }
+
+    .main img{
+        width: 400px;
+        height: 400px;
+    }
+
+}
+
+@media screen and (width < 600px){
+    .main img{
+        width: 275px;
+        height: 275px;
+    }
+}
+
