@@ -9,11 +9,9 @@ body{
 }
 
 body{
-    display: flex;
-    justify-content: center;
     background: url(img/bg.png);
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 main h1, main h2, main a{
@@ -55,3 +53,4 @@ a:hover{
         font-size: 25px;
     }
 }
+
