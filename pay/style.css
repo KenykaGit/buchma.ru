@@ -1,0 +1,18 @@
+@font-face {
+    font-family: MultiPro;
+    src: url(../MultiroundPro.otf);
+}
+
+*{
+    font-family: MultiPro;
+    background-color: #28043E;
+    color: white;
+}
+
+main{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: auto;
+}
