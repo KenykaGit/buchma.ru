@@ -1,29 +1,55 @@
-<script>
-    window.location.replace('https://vk.com/buchmadesign'); 
-</script>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buchma</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="scroll.css">
-    <link rel="icon" href="img/icon.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=no">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            background-color: #000000;
+            text-align: center;
+            color: white;
+        }
+        img {
+            max-width: 25rem;
+            max-height: 25rem;
+            min-width: 5rem;
+            min-height: 5rem;
+            margin: 12px;
+            width: 100%; 
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        
-        <h1>Buchma</h1>
-        <h2>больше чем minecraft</h2>
+    <img src="/img/Nostudio.png" alt="">
 
-        <a href="https://vk.com/buchmadesign" class="vk-link" style="color: white;  "><span style="color: #C5FF8B;">buchma</span>design</a>
+    <h1>Проверяем на наеб...</h1>
+    <div id="message">Перенаправление через <span id="countdown">хз</span> секунды...</div>
 
-        <br>
+    <script>
+        let countdown = 6;
+        const countdownElement = document.getElementById('countdown');
 
-        <a href="https://discord.gg/pa43q7kFXD" class="discord-link" style="color: #9974ff;" title="На нашем дискорд сервере тебя забулят просто что ты существуешь, твоя самооценка будет отрицательной, а сликерс подниметься в глазах своих друзей 😋">Discord</a>
-    </main>
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown <= 0) {
+                clearInterval(interval);
+                document.querySelector("#message").innerHTML = "ща погодь еще чуть чуть"
+                setTimeout(() => {
+                    window.location.replace('https://vk.com/buchmadesign');
+                }, 700);
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
