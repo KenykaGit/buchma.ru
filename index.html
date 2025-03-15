@@ -42,8 +42,8 @@
     <div class="flex justify-center items-center flex-col h-screen">
         <div class="hui">
             <img src="/img/Nostudio.png" alt="" class="Nostudio">
-            <h1>Проверяем на наеб...</h1>
-            <div id="message">Перенаправление через <span id="countdown">хз</span> секунды...</div>
+            <h1 id="naeb-text">Проверяем на наеб...</h1>
+            <div id="message" class="hidden">Перенаправление через <span id="countdown">хз</span> секунды...</div>
         </div>
 
         <div id="verification-div" class="hidden h-16 w-80 bg-[#222222] border border-[#505050] rounded-sm mt-4 flex flex-col p-4 py-[30px]">
@@ -59,46 +59,17 @@
                 <div class="flex flex-col">
                     <img src="img/Cloudflare_Logo.svg.png" alt="Cloudflare Logo" class="h-7 ml-4">
                     <div class="flex flex-row ml-auto gap-2 text-gray-400 mt-2" style="font-size: 8px;">
-                        <a href="https://www.google.com/search?q=%D0%90%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+%D1%81%D0%B5%D0%BA%D1%81&oq=%D0%90%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+%D1%81%D0%B5%D0%BA%D1%81&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE3ODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" class="hover:text-white">Privacy</a>
+                        <a href="" class="hover:text-white">Privacy</a>
                         •
-                        <a href="https://ege.sdamgia.ru/" class="hover:text-white">Terms</a>
+                        <a href="" class="hover:text-white">Terms</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        let countdown = 4;
-        const countdownElement = document.getElementById('countdown');
-        const verificationDiv = document.getElementById('verification-div');
-        const loaderIcon = document.getElementById('loader-icon');
-        const checkIcon = document.getElementById('check-icon');
-
-        const interval = setInterval(() => {
-            countdown--;
-            countdownElement.textContent = countdown;
-
-            if (countdown <= 0) {
-                clearInterval(interval);
-                document.querySelector("#message").innerHTML = "ща погодь еще чуть чуть";
-                
-                // Показываем div с проверкой через 2 секунды
-                setTimeout(() => {
-                    verificationDiv.classList.remove('hidden');
-                    
-                    // Скрываем loader и показываем check через 3 секунды
-                    setTimeout(() => {
-                        loaderIcon.classList.add('hidden'); // Скрываем loader
-                        checkIcon.classList.remove('hidden'); // Показываем check
-                        window.location.replace('https://vk.com/buchmadesign');
-                    }, 3000);
-                }, 2000);
-            }
-        }, 1000);
-    </script>
-    <script>
-        lucide.createIcons();
+    <script src="script.js">
+        
     </script>
 </body>
 </html>
