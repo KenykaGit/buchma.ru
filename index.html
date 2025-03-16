@@ -46,30 +46,42 @@
             <div id="message" class="hidden">Перенаправление через <span id="countdown">хз</span> секунды...</div>
         </div>
 
-        <div id="verification-div" class="hidden h-16 w-80 bg-[#222222] border border-[#505050] rounded-sm mt-4 flex flex-col p-4 py-[30px]">
+        <div id="verification-div" class="mt-3 hidden h-16 w-80 bg-[#222222] border border-[#505050] rounded-sm flex flex-col p-4 py-[30px]">
             <div class="flex items-center justify-between text-white h-full">
-                <div id="loader-icon" class="flex items-center justify-center flex-row">
+                <div id="loader" class="hidden flex items-center justify-center flex-row">
                     <i data-lucide="loader" class="animate-spin w-8 h-8" color="#1c9315"></i>
                     <span class="ml-2">Verifying...</span>
                 </div>
-                <div id="check-icon" class="hidden flex items-center justify-center flex-row">
+                <div id="checkbox-container" class="hidden flex items-center justify-center flex-row">
+                    <input type="checkbox" id="verification-checkbox" class="mr-2 w-6 h-6 border border-[#505050] rounded-sm accent-orange-500">
+                    <label for="verification-checkbox">Verify you are human</label>
+                </div>
+                <div id="success" class="hidden flex items-center justify-center flex-row">
                     <i data-lucide="check" class="w-8 h-8" color="#1c9315"></i>
                     <span class="ml-2">Success!</span>
+                </div>
+                <div id="failed" class="hidden flex items-center justify-center flex-row">
+                    <i data-lucide="ban" class="w-8 h-8" color="#DE5052"></i>
+                    <span class="ml-2">Failure!</span>
+                </div>
+                <div id="error" class="hidden flex items-center justify-center flex-row">
+                    <i data-lucide="X" class="w-8 h-8" color="#DE5052"></i>
+                    <div class="flex flex-col">
+                        <span>Error</span>
+                        <span style="font-size: 8px;" class="text-red-200">Having trouble? <a href="" class="error underline">Send Feedback</a></span>
+                    </div>
                 </div>
                 <div class="flex flex-col">
                     <img src="img/Cloudflare_Logo.svg.png" alt="Cloudflare Logo" class="h-7 ml-4">
                     <div class="flex flex-row ml-auto gap-2 text-gray-400 mt-2" style="font-size: 8px;">
-                        <a href="" class="hover:text-white">Privacy</a>
+                        <a href="" target="_blank" class="hover:text-white privacy-link">Privacy</a>
                         •
-                        <a href="" class="hover:text-white">Terms</a>
+                        <a href="" target="_blank" class="hover:text-white terms-link">Terms</a>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 
-    <script src="script.js">
-        
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
